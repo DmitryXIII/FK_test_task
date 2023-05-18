@@ -2,7 +2,7 @@ package ru.avacodo.fktesttask.domain.model
 
 import java.time.LocalDate
 
-data class ExerciseDomain(
+data class LessonDomain(
     val name: String,
     val date: LocalDate,
     val tab: String,

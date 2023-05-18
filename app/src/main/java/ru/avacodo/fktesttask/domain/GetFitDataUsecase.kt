@@ -1,7 +1,7 @@
 package ru.avacodo.fktesttask.domain
 
-import ru.avacodo.fktesttask.domain.model.ExerciseDomain
+import ru.avacodo.fktesttask.domain.model.LessonDomain
 
 interface GetFitDataUsecase {
-    suspend fun getFitData(): List<ExerciseDomain>
+    suspend fun getFitData(): List<LessonDomain>
 }
