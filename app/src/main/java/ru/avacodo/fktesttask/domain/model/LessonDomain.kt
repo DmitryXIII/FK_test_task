@@ -1,10 +1,10 @@
 package ru.avacodo.fktesttask.domain.model
 
-import java.time.LocalDate
+import java.util.*
 
 data class LessonDomain(
     val name: String,
-    val date: LocalDate,
+    val date: Date,
     val tab: String,
     val startTime: String,
     val endTime: String,
@@ -12,4 +12,8 @@ data class LessonDomain(
     val coachName: String,
     val place: String,
     val markerColor: String
-)
+) : FitData {
+    override fun getType(): FitDataType {
+        return FitDataType.LESSON
+    }
+}

@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import org.koin.android.ext.android.inject
 import ru.avacodo.fktesttask.R
 import ru.avacodo.fktesttask.databinding.FragmentLessonsListBinding
-import ru.avacodo.fktesttask.domain.model.LessonDomain
+import ru.avacodo.fktesttask.domain.model.FitData
 import ru.avacodo.fktesttask.ui.core.BaseFragmentWithViewModel
 
 class LessonListFragment :
-    BaseFragmentWithViewModel<FragmentLessonsListBinding, List<LessonDomain>>(
+    BaseFragmentWithViewModel<FragmentLessonsListBinding, List<FitData>>(
         FragmentLessonsListBinding::inflate
     ) {
     override val viewModel: LessonListViewModel by inject()
@@ -30,11 +30,11 @@ class LessonListFragment :
             adapter = lessonsAdapter
         }
         if (savedInstanceState == null) {
-//            viewModel.getLessonsList()
+            viewModel.getLessonsList()
         }
     }
 
-    override fun onSuccessAction(result: List<LessonDomain>) {
+    override fun onSuccessAction(result: List<FitData>) {
         super.onSuccessAction(result)
         lessonsAdapter.setData(result)
     }

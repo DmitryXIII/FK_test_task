@@ -13,6 +13,7 @@ abstract class BaseViewModel<ResultType> : ViewModel() {
     protected val uiState = MutableLiveData<AppState<ResultType>>()
 
     private val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
+        throw throwable
         uiState.postValue(AppState.Error(throwable.message.toString()))
     }
 
