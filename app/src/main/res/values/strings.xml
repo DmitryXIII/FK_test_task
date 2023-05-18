@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FK test task</string>
+    <string name="lessons_menu_title">Занятия</string>
+    <string name="requests_menu_title">Заявки</string>
+    <string name="add_menu_title">Добавить</string>
+    <string name="chat_menu_title">Чат</string>
+    <string name="more_menu_title">Ещё</string>
 </resources>
