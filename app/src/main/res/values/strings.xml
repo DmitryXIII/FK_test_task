@@ -11,4 +11,5 @@
     <string name="coach_name_example">Имя тренера</string>
     <string name="duration_time_example">1 ч. 15 мин.</string>
     <string name="place_example">Студия 2</string>
+    <string name="schedule_title">Расписание</string>
 </resources>

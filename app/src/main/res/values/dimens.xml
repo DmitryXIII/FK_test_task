@@ -9,4 +9,5 @@
     <dimen name="coach_name_margin">4dp</dimen>
     <dimen name="coach_name_text_size">12sp</dimen>
     <dimen name="base_margin">4dp</dimen>
+    <dimen name="default_elevation">4dp</dimen>
 </resources>

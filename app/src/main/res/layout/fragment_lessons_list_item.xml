@@ -84,7 +84,7 @@
             android:id="@+id/user_image_view"
             style="@style/lessonItemIconStyle"
             android:src="@drawable/ic_user"
-            app:layout_constraintBaseline_toBaselineOf="@id/coach_name_text_view"
+            app:layout_constraintTop_toTopOf="@id/lesson_place_image_view"
             app:layout_constraintStart_toStartOf="@id/lesson_name_text_view"
             tools:ignore="ContentDescription" />
 
@@ -125,7 +125,8 @@
             style="@style/lessonItemIconStyle"
             android:layout_marginEnd="@dimen/coach_name_margin"
             android:src="@drawable/ic_place"
-            app:layout_constraintBaseline_toBaselineOf="@id/lesson_place_text_view"
+            app:layout_constraintBottom_toBottomOf="@id/lesson_place_text_view"
+            app:layout_constraintTop_toTopOf="@id/lesson_place_text_view"
             app:layout_constraintEnd_toStartOf="@id/lesson_place_text_view"
             tools:ignore="ContentDescription" />
     </androidx.constraintlayout.widget.ConstraintLayout>

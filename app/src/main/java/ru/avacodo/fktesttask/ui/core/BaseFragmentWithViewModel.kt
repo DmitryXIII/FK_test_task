@@ -21,7 +21,7 @@ abstract class BaseFragmentWithViewModel<VB : ViewBinding, ResultType>(
 
     abstract val progressBar: ProgressBar
 
-    protected lateinit var navigator: Navigator
+    private lateinit var navigator: Navigator
 
     private fun showSnack(message: String) {
         navigator.showSnackAboveNavigationView(message)
@@ -42,6 +42,14 @@ abstract class BaseFragmentWithViewModel<VB : ViewBinding, ResultType>(
                 ) as Navigator
         } else {
             error("Require activity must be a type of NavigationFragmentHolder")
+        }
+    }
+
+    protected fun setActionBarTitle(title: String) {
+        if (requireActivity() is TitleOwner) {
+            (requireActivity() as TitleOwner).setActionBarTitle(title)
+        } else {
+            error("Require activity must be a type of TitleOwner")
         }
     }
 

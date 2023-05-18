@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.koin.android.ext.android.inject
+import ru.avacodo.fktesttask.R
 import ru.avacodo.fktesttask.databinding.FragmentLessonsListBinding
 import ru.avacodo.fktesttask.domain.model.LessonDomain
 import ru.avacodo.fktesttask.ui.core.BaseFragmentWithViewModel
@@ -23,12 +24,13 @@ class LessonListFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setActionBarTitle(getString(R.string.schedule_title))
         binding.lessonsRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = lessonsAdapter
         }
         if (savedInstanceState == null) {
-            viewModel.getLessonsList()
+//            viewModel.getLessonsList()
         }
     }
 
