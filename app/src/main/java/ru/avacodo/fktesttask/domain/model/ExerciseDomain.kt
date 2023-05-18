@@ -1,4 +1,4 @@
-package ru.avacodo.fktesttask.domain
+package ru.avacodo.fktesttask.domain.model
 
 data class ExerciseDomain(
     val name: String,
