@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="lessonItemIconStyle">
+        <item name="android:layout_height">@dimen/list_item_icon_size</item>
+        <item name="android:layout_width">@dimen/list_item_icon_size</item>
+        <item name="tint">@android:color/darker_gray</item>
+        <item name="android:baselineAlignBottom">true</item>
+    </style>
+
+    <style name="lessonItemSecondary">
+        <item name="android:textSize">@dimen/lesson_item_secondary_text_size</item>
+    </style>
+</resources>

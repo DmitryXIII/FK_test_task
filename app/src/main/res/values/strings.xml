@@ -5,4 +5,10 @@
     <string name="add_menu_title">Добавить</string>
     <string name="chat_menu_title">Чат</string>
     <string name="more_menu_title">Ещё</string>
+    <string name="start_time_example">10:00</string>
+    <string name="end_time_example">11:00</string>
+    <string name="lesson_name_example">Название занятия</string>
+    <string name="coach_name_example">Имя тренера</string>
+    <string name="duration_time_example">1 ч. 15 мин.</string>
+    <string name="place_example">Студия 2</string>
 </resources>

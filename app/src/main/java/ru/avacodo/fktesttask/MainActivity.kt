@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity(), NavigationFragmentHolder {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.host_container, NavigationFragment())
+                .replace(R.id.host_container, NavigationFragment(), NAVIGATION_FRAGMENT_TAG)
                 .commit()
         }
     }

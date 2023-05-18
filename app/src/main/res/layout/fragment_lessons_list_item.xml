@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/list_item_margin"
+    app:cardCornerRadius="@dimen/list_item_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guide"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/start_guide" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/top_guide"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/list_item_margin" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guide"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/list_item_margin" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottom_guide"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/list_item_margin" />
+
+        <View
+            android:id="@+id/lesson_marker_view"
+            android:layout_width="6dp"
+            android:layout_height="@dimen/zero"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@android:color/holo_orange_dark" />
+
+        <TextView
+            android:id="@+id/start_time_text_view"
+            style="@style/lessonItemSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/lesson_name_text_view"
+            app:layout_constraintStart_toEndOf="@id/start_guide"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/start_time_example" />
+
+        <TextView
+            android:id="@+id/end_time_text_view"
+            style="@style/lessonItemSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/coach_name_text_view"
+            app:layout_constraintStart_toEndOf="@id/start_guide"
+            tools:text="@string/end_time_example" />
+
+        <TextView
+            android:id="@+id/lesson_name_text_view"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/coach_name_text_view"
+            app:layout_constraintEnd_toStartOf="@id/lesson_duration_text_view"
+            app:layout_constraintStart_toEndOf="@id/start_time_text_view"
+            app:layout_constraintTop_toTopOf="@id/top_guide"
+            tools:text="@string/lesson_name_example" />
+
+        <ImageView
+            android:id="@+id/user_image_view"
+            style="@style/lessonItemIconStyle"
+            android:src="@drawable/ic_user"
+            app:layout_constraintBaseline_toBaselineOf="@id/coach_name_text_view"
+            app:layout_constraintStart_toStartOf="@id/lesson_name_text_view"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/coach_name_text_view"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guide"
+            app:layout_constraintEnd_toStartOf="@id/lesson_place_image_view"
+            app:layout_constraintStart_toEndOf="@id/user_image_view"
+            app:layout_constraintTop_toBottomOf="@id/lesson_name_text_view"
+            tools:text="@string/coach_name_example" />
+
+        <TextView
+            android:id="@+id/lesson_duration_text_view"
+            style="@style/lessonItemSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/lesson_name_text_view"
+            app:layout_constraintEnd_toEndOf="@id/end_guide"
+            tools:text="@string/duration_time_example" />
+
+        <TextView
+            android:id="@+id/lesson_place_text_view"
+            style="@style/lessonItemSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/coach_name_text_view"
+            app:layout_constraintEnd_toEndOf="@id/end_guide"
+            app:layout_constraintTop_toBottomOf="@id/lesson_duration_text_view"
+            tools:text="@string/place_example" />
+
+        <ImageView
+            android:id="@+id/lesson_place_image_view"
+            style="@style/lessonItemIconStyle"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_place"
+            app:layout_constraintBaseline_toBaselineOf="@id/lesson_place_text_view"
+            app:layout_constraintEnd_toStartOf="@id/lesson_place_text_view"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
