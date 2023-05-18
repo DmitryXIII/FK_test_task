@@ -39,6 +39,8 @@ android {
 }
 
 dependencies {
+    implementation "io.insert-koin:koin-android:3.2.0"
+
     implementation 'androidx.fragment:fragment-ktx:1.5.7'
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"

@@ -4,7 +4,7 @@
     <style name="lessonItemIconStyle">
         <item name="android:layout_height">@dimen/list_item_icon_size</item>
         <item name="android:layout_width">@dimen/list_item_icon_size</item>
-        <item name="tint">@android:color/darker_gray</item>
+        <item name="tint">@color/black_50</item>
         <item name="android:baselineAlignBottom">true</item>
     </style>
 

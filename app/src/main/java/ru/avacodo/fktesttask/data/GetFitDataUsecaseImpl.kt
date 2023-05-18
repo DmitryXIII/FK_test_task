@@ -24,7 +24,8 @@ class GetFitDataUsecaseImpl(private val repository: FitDataRepository) : GetFitD
                     endTime = endTime,
                     coachName = remoteData.trainers.find { it.id == coach_id }?.full_name
                         ?: DEFAULT_COACH_NAME,
-                    place = place
+                    place = place,
+                    markerColor = color
                 )
             }
         }

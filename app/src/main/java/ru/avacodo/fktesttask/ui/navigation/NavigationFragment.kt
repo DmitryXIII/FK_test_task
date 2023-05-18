@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import ru.avacodo.fktesttask.R
 import ru.avacodo.fktesttask.databinding.FragmentNavigationBinding
 import ru.avacodo.fktesttask.ui.core.BaseFragment
-import ru.avacodo.fktesttask.ui.screens.LessonListFragment
+import ru.avacodo.fktesttask.ui.screens.lessons.LessonListFragment
 import ru.avacodo.fktesttask.ui.showSnackAboveNavView
 
 class NavigationFragment :

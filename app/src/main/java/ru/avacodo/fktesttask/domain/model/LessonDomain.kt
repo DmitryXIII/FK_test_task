@@ -9,5 +9,6 @@ data class LessonDomain(
     val startTime: String,
     val endTime: String,
     val coachName: String,
-    val place: String
+    val place: String,
+    val markerColor: String
 )

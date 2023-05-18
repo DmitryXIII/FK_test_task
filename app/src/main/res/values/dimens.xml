@@ -6,4 +6,6 @@
     <dimen name="list_item_icon_size">12dp</dimen>
     <dimen name="lesson_item_secondary_text_size">11sp</dimen>
     <dimen name="start_guide">14dp</dimen>
+    <dimen name="coach_name_margin">4dp</dimen>
+    <dimen name="coach_name_text_size">12sp</dimen>
 </resources>
