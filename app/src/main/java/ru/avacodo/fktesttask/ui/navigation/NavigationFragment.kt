@@ -1,6 +1,7 @@
 package ru.avacodo.fktesttask.ui.navigation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -15,8 +16,12 @@ class NavigationFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.bottomNavView.setOnItemSelectedListener { menuItem ->
 
+        if (savedInstanceState == null) {
+            navigateToDestination(LessonListFragment())
+        }
+
+        binding.bottomNavView.setOnItemSelectedListener { menuItem ->
             if (binding.bottomNavView.selectedItemId != menuItem.itemId) {
                 when (menuItem.itemId) {
                     R.id.action_lessons -> {

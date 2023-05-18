@@ -8,6 +8,7 @@
         android:id="@+id/lessons_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/base_margin"
         tools:itemCount="10"
         tools:listitem="@layout/fragment_lessons_list_item" />
 
