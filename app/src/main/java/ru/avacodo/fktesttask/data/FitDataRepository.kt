@@ -1,7 +1,7 @@
 package ru.avacodo.fktesttask.data
 
-import ru.avacodo.fktesttask.data.dto.FitData
+import ru.avacodo.fktesttask.data.dto.FitDataDto
 
 interface FitDataRepository {
-    suspend fun getFitData(): FitData
+    suspend fun getFitData(): FitDataDto
 }

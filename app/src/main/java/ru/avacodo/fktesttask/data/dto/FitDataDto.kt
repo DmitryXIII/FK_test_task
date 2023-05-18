@@ -1,6 +1,6 @@
 package ru.avacodo.fktesttask.data.dto
 
-data class FitData(
+data class FitDataDto(
     val lessons: List<Lesson>,
     val option: Option,
     val tabs: List<Tab>,

@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    app:cardBackgroundColor="@color/white"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/recycler_horizontal_margin"
     android:layout_marginVertical="@dimen/list_item_margin"
-    android:layout_marginHorizontal="16dp"
+    app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/list_item_corner_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,8 +85,8 @@
             android:id="@+id/user_image_view"
             style="@style/lessonItemIconStyle"
             android:src="@drawable/ic_user"
-            app:layout_constraintTop_toTopOf="@id/lesson_place_image_view"
             app:layout_constraintStart_toStartOf="@id/lesson_name_text_view"
+            app:layout_constraintTop_toTopOf="@id/lesson_place_image_view"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -127,8 +127,8 @@
             android:layout_marginEnd="@dimen/coach_name_margin"
             android:src="@drawable/ic_place"
             app:layout_constraintBottom_toBottomOf="@id/lesson_place_text_view"
-            app:layout_constraintTop_toTopOf="@id/lesson_place_text_view"
             app:layout_constraintEnd_toStartOf="@id/lesson_place_text_view"
+            app:layout_constraintTop_toTopOf="@id/lesson_place_text_view"
             tools:ignore="ContentDescription" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

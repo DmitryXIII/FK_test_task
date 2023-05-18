@@ -1,7 +1,6 @@
 package ru.avacodo.fktesttask.ui.screens.lessons
 
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +17,8 @@ import ru.avacodo.fktesttask.ui.core.BaseDiffUtilCallback
 import java.text.SimpleDateFormat
 import java.util.*
 
+private const val FORMAT_PATTERN = "EEEE, dd MMMM"
+
 class LessonsListAdapter(private val onClick: (name: String) -> Unit) :
     RecyclerView.Adapter<ViewHolder>() {
 
@@ -31,7 +32,7 @@ class LessonsListAdapter(private val onClick: (name: String) -> Unit) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return when (viewType) {
-            0 -> {
+            FitDataType.DATE.value -> {
                 DateViewHolder(
                     FragmentDateListItemBinding.inflate(
                         LayoutInflater.from(parent.context),
@@ -53,12 +54,12 @@ class LessonsListAdapter(private val onClick: (name: String) -> Unit) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        when (dataList[position].getType()) {
-            FitDataType.DATE -> {
-                (holder as DateViewHolder).bind(dataList[position] as LessonDate)
+        when (val dataItem = dataList[position]) {
+            is LessonDate -> {
+                (holder as DateViewHolder).bind(dataItem)
             }
-            FitDataType.LESSON -> {
-                (holder as LessonViewHolder).bind(dataList[position] as LessonDomain)
+            is LessonDomain -> {
+                (holder as LessonViewHolder).bind(dataItem)
             }
         }
     }
@@ -94,11 +95,10 @@ class LessonsListAdapter(private val onClick: (name: String) -> Unit) :
     }
 
     inner class DateViewHolder(view: View) : ViewHolder(view) {
+        private val sdf = SimpleDateFormat(FORMAT_PATTERN, Locale.getDefault())
         fun bind(date: LessonDate) {
             FragmentDateListItemBinding.bind(itemView).apply {
-                Log.d("@#@", "bind: date = $date")
-                dateHeaderTextView.text =
-                    SimpleDateFormat("EEEE, dd MMMM", Locale.getDefault()).format(date.date)
+                dateHeaderTextView.text = sdf.format(date.date)
             }
         }
     }

@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="24dp"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginBottom="12dp">
+    android:layout_marginTop="@dimen/date_header_margin_top"
+    android:layout_marginHorizontal="@dimen/recycler_horizontal_margin"
+    android:layout_marginBottom="@dimen/date_header_margin_bottom">
 
     <TextView
         android:id="@+id/date_header_text_view"
