@@ -8,6 +8,7 @@ data class LessonDomain(
     val tab: String,
     val startTime: String,
     val endTime: String,
+    val duration: String,
     val coachName: String,
     val place: String,
     val markerColor: String

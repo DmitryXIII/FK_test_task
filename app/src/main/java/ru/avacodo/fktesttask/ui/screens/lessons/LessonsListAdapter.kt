@@ -47,6 +47,7 @@ class LessonsListAdapter(private val onClick: (name: String) -> Unit) :
                 endTimeTextView.text = lesson.endTime
                 lessonPlaceTextView.text = lesson.place
                 lessonMarkerView.setBackgroundColor(Color.parseColor(lesson.markerColor))
+                lessonDurationTextView.text = lesson.duration
             }
             itemView.setOnClickListener {
                 onClick.invoke(lesson.name)

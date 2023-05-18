@@ -1,7 +1,7 @@
 package ru.avacodo.fktesttask.ui.screens.lessons
 
 import kotlinx.coroutines.launch
-import ru.avacodo.fktesttask.domain.GetFitDataUsecase
+import ru.avacodo.fktesttask.domain.usecase.lessons.GetFitDataUsecase
 import ru.avacodo.fktesttask.domain.model.LessonDomain
 import ru.avacodo.fktesttask.ui.core.AppState
 import ru.avacodo.fktesttask.ui.core.BaseViewModel
