@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.avacodo.fktesttask.R
 import ru.avacodo.fktesttask.databinding.FragmentLessonsListBinding
 import ru.avacodo.fktesttask.domain.model.FitData
@@ -14,7 +14,7 @@ class LessonListFragment :
     BaseFragmentWithViewModel<FragmentLessonsListBinding, List<FitData>>(
         FragmentLessonsListBinding::inflate
     ) {
-    override val viewModel: LessonListViewModel by inject()
+    override val viewModel: LessonListViewModel by viewModel()
 
     override val progressBar by lazy { binding.lessonsProgressBar }
 
@@ -29,6 +29,7 @@ class LessonListFragment :
             layoutManager = LinearLayoutManager(requireContext())
             adapter = lessonsAdapter
         }
+
         if (savedInstanceState == null) {
             viewModel.getLessonsList()
         }
