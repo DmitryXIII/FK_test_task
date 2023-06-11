@@ -19,8 +19,9 @@ https://olimpia.fitnesskit-admin.ru/schedule/get_v3/?club_id=2:
 ## Реализованное задание:
 ### Стек:
 * Kotlin
-* MVVM
 * Koin
+* MVVM
+* LiveData
 * ViewBinding (XML)
 * Coroutines
 * Retrofit 2
