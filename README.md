@@ -16,7 +16,14 @@ https://olimpia.fitnesskit-admin.ru/schedule/get_v3/?club_id=2:
 * Пример верстки для вью занятия:
 ![example_2](https://github.com/DmitryXIII/FK_test_task/assets/91154478/d863aba7-5fdc-447d-a772-9e9660baa412)
 
-## Скриншот реализованного задания:
+## Реализованное задание:
+# Стек:
+* Kotlin
+* MVVM
+* Koin
+* ViewBinding (XML)
+* Coroutines
+* Retrofit 2
 [![Latest Stable Version](https://img.shields.io/badge/version-1.0.0-green)](https://img.shields.io/badge/version-1.0.0-green)
 <p align="center">
     <a><img src="https://github.com/DmitryXIII/FK_test_task/assets/91154478/8b20a9df-30a4-4889-a41e-0e606c97d3f8" width="300"/></a>
